@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f4f6;
+}
+
+.mat-typography {
+  font: 400 1rem / 1.4rem Poppins, sans-serif;
+}
+
+.slim-scroll::-webkit-scrollbar {
+    display: block;
+    width: 5px;
+    background-color: blue;
+  }
+  
+  .slim-scroll::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 5px;
+  
+  }
+  
+  .slim-scroll::-webkit-scrollbar-track {
+    background-color: white;
+  }
+  
+  .slim-scroll:hover::-webkit-scrollbar {
+    display: block; /* Show the scrollbar on hover */
+  }
+  
+  .slim-scroll:hover::-webkit-scrollbar-thumb {
+    display: block; /* Show the scrollbar thumb on hover */
+  }
+  
+  .slim-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  .slim-scroll::-webkit-scrollbar-thumb:active {
+    background-color: #555;
+  }
+
+  .mat-mdc-form-field-infix {
+    width: 100% !important; /* Adjust width as needed */
+  }
+
+  #a85aa9a8-70f8-49a0-91e4-e8ca3e9b5e25-212{
+    fill: #52c252;
+  }

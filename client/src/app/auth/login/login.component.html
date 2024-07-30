@@ -1,0 +1,44 @@
+<form (ngSubmit)="login()" class="md:flex justify-center px-20 bg-white gap-10">
+
+    <div class="h-auto md:w-3/5  " style="background-image: url('register.svg');
+      background-repeat: no-repeat;background-size: contain;
+      background-color: white;
+      background-position: bottom;
+      ">
+
+    </div>
+    <div class="bg-white my-10 p-5 rounded  md:w-1/4  flex flex-col gap-3 shadow-sm drop-shadow-md">
+        <div class="py-3 text-center">
+            <i class="material-icons"
+                style="font-size: 50px; color: darkblue; border-radius: 50%; padding: 10px; background-color: #e8eaf6;">person</i>
+            <div class="text-2xl my-2 font-medium text-blue-800 ">
+                Login
+            </div>
+        </div>
+        <div class="w-full">
+            <mat-form-field class="w-full" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input type="email" name="email" matInput placeholder="Email" [(ngModel)]="email">
+                <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="w-full" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input [(ngModel)]="password" [type]="hide() ? 'password' : 'text'" name="password" class="w-full"
+                    matInput placeholder="Password">
+                <mat-icon (click)="togglePassword($event)" matSuffix>
+                    {{hide() ? 'visibility_off' : 'visibility'}}
+                </mat-icon>
+            </mat-form-field>
+
+            <button [disabled]="!email || !password" type="submit"
+                class="w-full mb-5 bg-blue-900 text-white rounded-md p-2">Login</button>
+
+            <p class="font-bold text-xs text-center">
+                Don't have an account? <a class="text-blue-500" [routerLink]="['/auth/register']">Register</a>
+            </p>
+
+
+        </div>
+    </div>
+</form>
